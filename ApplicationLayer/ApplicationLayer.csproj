@@ -5,23 +5,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="obj\Debug\net10.0\.NETCoreApp,Version=v10.0.AssemblyAttributes.cs" />
-    <Compile Include="obj\Debug\net10.0\ApplicationLayer.AssemblyInfo.cs" />
-    <Compile Include="obj\Debug\net10.0\ApplicationLayer.GlobalUsings.g.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\Debug\net10.0\ApplicationLayer.deps.json" />
-    <Content Include="obj\ApplicationLayer.csproj.nuget.dgspec.json" />
-    <Content Include="obj\Debug\net10.0\ApplicationLayer.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\net10.0\ApplicationLayer.sourcelink.json" />
-    <Content Include="obj\project.assets.json" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\DomainLayer\DomainLayer.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Auth\" />
-    <Folder Include="bin\Release\net10.0\" />
     <Folder Include="CatReport\Commands\CreateCatReport\" />
     <Folder Include="CatReport\Commands\DeleteCatReport\" />
     <Folder Include="CatReport\Commands\UpdateCatReport\" />
@@ -64,25 +51,6 @@
     <Folder Include="Users\Interfaces\" />
     <Folder Include="Users\Queries\GetAllUsers\" />
     <Folder Include="Users\Queries\GetUserbyId\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\net10.0\ApplicationLayer.dll" />
-    <None Include="bin\Debug\net10.0\ApplicationLayer.pdb" />
-    <None Include="bin\Debug\net10.0\DomainLayer.dll" />
-    <None Include="bin\Debug\net10.0\DomainLayer.pdb" />
-    <None Include="obj\ApplicationLayer.csproj.nuget.g.props" />
-    <None Include="obj\ApplicationLayer.csproj.nuget.g.targets" />
-    <None Include="obj\Debug\net10.0\Applicat.033E422A.Up2Date" />
-    <None Include="obj\Debug\net10.0\ApplicationLayer.AssemblyInfoInputs.cache" />
-    <None Include="obj\Debug\net10.0\ApplicationLayer.assets.cache" />
-    <None Include="obj\Debug\net10.0\ApplicationLayer.csproj.AssemblyReference.cache" />
-    <None Include="obj\Debug\net10.0\ApplicationLayer.csproj.CoreCompileInputs.cache" />
-    <None Include="obj\Debug\net10.0\ApplicationLayer.dll" />
-    <None Include="obj\Debug\net10.0\ApplicationLayer.GeneratedMSBuildEditorConfig.editorconfig" />
-    <None Include="obj\Debug\net10.0\ApplicationLayer.pdb" />
-    <None Include="obj\Debug\net10.0\refint\ApplicationLayer.dll" />
-    <None Include="obj\Debug\net10.0\ref\ApplicationLayer.dll" />
-    <None Include="obj\project.nuget.cache" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="16.1.1" />

@@ -5,35 +5,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="obj\Debug\net10.0\.NETCoreApp,Version=v10.0.AssemblyAttributes.cs" />
-    <Compile Include="obj\Debug\net10.0\DomainLayer.AssemblyInfo.cs" />
-    <Compile Include="obj\Debug\net10.0\DomainLayer.GlobalUsings.g.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\Debug\net10.0\DomainLayer.deps.json" />
-    <Content Include="obj\Debug\net10.0\DomainLayer.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\net10.0\DomainLayer.sourcelink.json" />
-    <Content Include="obj\DomainLayer.csproj.nuget.dgspec.json" />
-    <Content Include="obj\project.assets.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Release\net10.0\" />
     <Folder Include="Common\" />
     <Folder Include="Models\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\net10.0\DomainLayer.dll" />
-    <None Include="bin\Debug\net10.0\DomainLayer.pdb" />
-    <None Include="obj\Debug\net10.0\DomainLayer.AssemblyInfoInputs.cache" />
-    <None Include="obj\Debug\net10.0\DomainLayer.assets.cache" />
-    <None Include="obj\Debug\net10.0\DomainLayer.csproj.CoreCompileInputs.cache" />
-    <None Include="obj\Debug\net10.0\DomainLayer.dll" />
-    <None Include="obj\Debug\net10.0\DomainLayer.GeneratedMSBuildEditorConfig.editorconfig" />
-    <None Include="obj\Debug\net10.0\DomainLayer.pdb" />
-    <None Include="obj\Debug\net10.0\refint\DomainLayer.dll" />
-    <None Include="obj\Debug\net10.0\ref\DomainLayer.dll" />
-    <None Include="obj\DomainLayer.csproj.nuget.g.props" />
-    <None Include="obj\DomainLayer.csproj.nuget.g.targets" />
-    <None Include="obj\project.nuget.cache" />
   </ItemGroup>
 </Project>
