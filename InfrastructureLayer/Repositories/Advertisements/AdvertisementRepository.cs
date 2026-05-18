@@ -39,7 +39,10 @@ namespace InfrastructureLayer.Repositories.Advertisements
         /// </summary>
         public async Task<IEnumerable<Advertisement>> GetFilteredAsync(AdvertisementType? type, string? city)
         {
-            var query = _dbSet.Include(a => a.Location).AsQueryable();
+            var query = _dbSet
+                .Include(a => a.Cat)
+                .Include(a => a.Location)
+                .AsQueryable();
 
             if (type.HasValue)
                 query = query.Where(a => a.Type == type.Value);
@@ -48,6 +51,22 @@ namespace InfrastructureLayer.Repositories.Advertisements
                 query = query.Where(a => a.Location.City == city);
 
             return await query.ToListAsync();
+        }
+
+        public override async Task<IEnumerable<Advertisement>> GetAllAsync()
+        {
+            return await _dbSet
+                .Include(a => a.Cat)
+                .Include(a => a.Location)
+                .ToListAsync();
+        }
+
+        public override async Task<Advertisement?> GetByIdAsync(int id)
+        {
+            return await _dbSet
+                .Include(a => a.Cat)
+                .Include(a => a.Location)
+                .FirstOrDefaultAsync(a => a.AdvertisementId == id);
         }
     }
 }

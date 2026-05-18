@@ -8,18 +8,27 @@ namespace ApplicationLayer.Common.Mappings
     {
         public AdvertisementProfile()
         {
-            // Advertisement → response
-            CreateMap<Advertisement, AdvertisementResponseDto>();
+            // Advertisement -> Response DTO
+            CreateMap<Advertisement, AdvertisementResponseDto>()
+                .ForMember(dest => dest.Cat, opt => opt.MapFrom(src => src.Cat))
+                .ForMember(dest => dest.Location, opt => opt.MapFrom(src => src.Location));
 
-            // Create request → entity
-            // AccountId is not in the DTO — it is set from the JWT token in the handler
+            // Create DTO -> Entity
             CreateMap<CreateAdvertisementDto, Advertisement>()
-                .ForMember(dest => dest.AccountId, opt => opt.Ignore())
-                .ForMember(dest => dest.Status, opt => opt.MapFrom(_ => AdvertisementStatus.Active));
+                .ForMember(dest => dest.AccountId,
+                    opt => opt.Ignore())
+                .ForMember(dest => dest.Status,
+                    opt => opt.MapFrom(_ => AdvertisementStatus.Active))
+                .ForMember(dest => dest.Cat,
+                    opt => opt.MapFrom(src => src.Cat))
+                .ForMember(dest => dest.Location,
+                    opt => opt.MapFrom(src => src.Location));
 
-            // Update request → entity (only map fields that were actually sent)
+            // Update DTO -> Entity
             CreateMap<UpdateAdvertisementDto, Advertisement>()
-                .ForAllMembers(opt => opt.Condition((src, dest, srcMember) => srcMember != null));
+                .ForAllMembers(opt =>
+                    opt.Condition((src, dest, srcMember) => srcMember != null));
         }
     }
 }
+
