@@ -33,6 +33,11 @@ namespace ApplicationLayer.CatReport.Commands.CreateCatReport
             var ad = _mapper.Map<Advertisement>(request.Dto);
             ad.AccountId = accountId.Value;
 
+            if (ad.Cat is not null)
+            {
+                ad.Cat.AccountId = accountId.Value;
+            }
+
             await _repo.AddAsync(ad);
 
             return OperationResult<AdvertisementResponseDto>.Success(

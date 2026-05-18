@@ -1,15 +1,17 @@
-using System.ComponentModel.DataAnnotations;
+using ApplicationLayer.Cat.DTOs;
+using ApplicationLayer.Location.DTOs;
 using DomainLayer.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace ApplicationLayer.CatReport.DTOs
 {
     public class CreateAdvertisementDto
     {
-        [Required]
-        public int CatId { get; set; }
+        //[Required]
+        //public int CatId { get; set; }
 
-        [Required]
-        public int LocationId { get; set; }
+        //[Required]
+        //public int LocationId { get; set; }
 
         [Required]
         [MaxLength(200)]
@@ -31,5 +33,11 @@ namespace ApplicationLayer.CatReport.DTOs
 
         [Required]
         public AdvertisementType Type { get; set; }
+
+        [Required]
+        public CreateCatDto Cat { get; set; } = null!;
+
+        [Required]
+        public CreateLocationDto Location { get; set; } = null!;
     }
 }

@@ -21,11 +21,11 @@ namespace InfrastructureLayer.Repositories
         }
 
         /// <summary>Looks up a single row by primary key using EF Core's FindAsync (hits cache before DB).</summary>
-        public async Task<T?> GetByIdAsync(int id)
+        public virtual async Task<T?> GetByIdAsync(int id)
             => await _dbSet.FindAsync(id);
 
         /// <summary>Fetches every row for this entity type. Avoid on large tables without pagination.</summary>
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public virtual async Task<IEnumerable<T>> GetAllAsync()
             => await _dbSet.ToListAsync();
 
         /// <summary>Runs a LINQ Where clause against the database and returns matching rows.</summary>
